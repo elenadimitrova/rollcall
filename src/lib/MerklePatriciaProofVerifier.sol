@@ -28,7 +28,7 @@ library MerklePatriciaProofVerifier {
         bytes32 rootHash,
         bytes memory path,
         RLPReader.RLPItem[] memory stack
-    ) internal pure returns (bytes memory value) {
+    ) public pure returns (bytes memory value) {
         bytes memory mptKey = _decodeNibbles(path, 0);
         uint256 mptKeyOffset = 0;
 
